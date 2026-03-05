@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* Estilos para la pagina index */
 header {
     background-color: #525252; 
     color: white;
@@ -52,8 +53,179 @@ aside a {
     font-size: 30px;
 }
 
-main {
+.main-index {
     flex: 1;          
     padding: 20px;
     background-color: white;
 }
+
+/* fin del index */
+
+/* inicio del gfooter */
+/* FOOTER: NO MODIFICAR SIN PREGUNTAR ANTES */
+footer {
+    background-color: #525252;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-footer,
+.contacto,
+.avisos {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-footer p {
+    font-size: 1rem !important;
+    color: var(--blanco);
+}
+
+/* Redes en una fila completa */
+.social-links {
+    color: white;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+}
+
+.social-links li {
+    list-style: none;
+}
+
+.contacto h3 {
+    color: var(--blanco);
+}
+
+.legal-links {
+    color: var(--blanco);
+    text-align: center;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.legal-links li {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.legal-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.legal-links a:hover {
+    color: var(--procederPago);
+}
+
+/* fin del footer */
+
+
+/* inicio del login*/
+
+.login-register{
+   text-align: center;
+}
+
+.login-register a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.top-contenedor {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px; 
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.top-contenedor img {
+    width: 65px;
+    height: auto;
+    grid-column: 1; 
+}
+
+.top-contenedor h1 {
+    grid-column: 2;
+    text-align: center;
+    margin: 0;
+}
+
+.login-wrapper {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    min-height: 50vh;        
+    padding: 20px;
+    margin-bottom: 45px;
+}
+
+.login-box {
+    background-color: white;
+    border: 3px solid black; 
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;        
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.1); 
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.input-stroke {
+    padding: 12px;
+    border: 2px solid black;
+    outline: none;
+}
+
+.btn-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; 
+    width: 100%;
+    padding: 12px;
+    background-color: #6189F8;
+    color: white;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-sizing: border-box; 
+}
+
+.form-login h3{
+    padding-top: 15px;
+}
+
+
+
