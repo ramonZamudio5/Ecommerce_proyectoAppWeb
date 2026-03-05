@@ -154,6 +154,7 @@ footer {
 .top-contenedor {
     display: grid;
     grid-template-columns: 100px 1fr 100px; 
+    grid-template-rows: auto;
     align-items: center;
     width: 100%;
     padding: 10px 20px;
@@ -228,4 +229,11 @@ footer {
 }
 
 /* fin del login */
+
+/*inicio del perfil de usuario*/
+.top-contenedor .perfil-img{
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+}
 
