@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #525252; 
+    color: white;
+    padding: 10px 5%; 
+}
+
+.div {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;          
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.usuario img {
+    width: 50px;
+    height: auto;
+}
+
+.logo a{
+    color: white;
+    text-decoration: none;
+}
+
+.contenido-flex {
+    display: flex; 
+    min-height: 100vh; 
+}
+
+aside {
+    padding: 25px;
+    width: 250px;      
+    background-color: darkgrey;
+    padding: 20px;
+}
+
+aside a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+main {
+    flex: 1;          
+    padding: 20px;
+    background-color: white;
+}
