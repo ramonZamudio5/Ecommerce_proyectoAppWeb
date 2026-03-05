@@ -19,10 +19,35 @@
         </header>
         <div class = "contenido-flex">
             <aside>
-                <a href="./catalogo.html">Catalogo</a>
-                <a href="./carrito.html">Carrito</a>
-                <a href="./pedidos.html">Gestion de pedidos</a>
-                <a href="./login.html">Iniciar Sesión</a>
+                <form class="contenedor-filtros">
+                    <h2>Filtrar Búsqueda</h2>
+
+                    <div class="campo">
+                        <label for="txt_productos">Nombre del producto</label>
+                        <input type="text" name="txt_productos" id="txt_productos" >
+                    </div>
+
+                    <div class="campo">
+                        <label for="txt_precio">Precio máximo</label>
+                        <input type="number" name="txt_precio" id="txt_precio" >
+                    </div>
+
+                    <div class="contenedor-radio">
+                        <h3>Ordenar por precio:</h3>
+                        <label class="opcion-radio">
+                            <input type="radio" name="orden" value="Mayor" checked>
+                            <span class="custom-radio"></span>
+                            Mayor a menor
+                        </label>
+                        <label class="opcion-radio">
+                            <input type="radio" name="orden" value="Menor">
+                            <span class="custom-radio"></span>
+                            Menor a mayor
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-estilo btn-aplicar">Aplicar Filtros</button>
+                </form>
             </aside>
             <main class ="main-index">
                 <div class = "top-contenedor">
@@ -45,7 +70,7 @@
                                 <td class="celda-acciones">
                                     <div class="contenedor-botones">
                                         <a href="detalles.html" class="btn-estilo btn-detalles">Detalles</a>
-                                        <a href="carrito.html" class="btn-estilo btn-carrito">Añadir al carrito</a>
+                                        <a href="carrito.html" class="btn-estilo btn-carrito">Añadir </a>
                                         <a href="resena.html" class="btn-estilo btn-resena">Reseña </a>
                                     </div>
                                 </td>
@@ -80,7 +105,7 @@
                                 <td class="celda-acciones">
                                     <div class="contenedor-botones">
                                         <a href="detalles-monitor.html" class="btn-estilo btn-detalles">Detalles</a>
-                                        <a href="carrito.html?id=104" class="btn-estilo btn-carrito">Añadir al carrito</a>
+                                        <a href="carrito.html?id=104" class="btn-estilo btn-carrito">Añadir</a>
                                         <a href="resena-monitor.html" class="btn-estilo btn-resena">Reseña</a>
                                     </div>
                                 </td>
