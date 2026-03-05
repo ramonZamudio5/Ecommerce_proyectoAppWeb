@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ecommerce web</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div class = div>
+                <div class = "logo">
+                    <a href="./index.html"><h1>Logo de la marca</h1></a>
+                </div>
+                <div class = "usuario">
+                    <a href="./perfilUsuario.html"><img src="./imgs/user.png" alt=""></a>
+                <h3>Cerrar sesión</h3>
+                </div>
+            </div>
+        </header>
+        <div class = "contenido-flex">
+            <aside>
+                <a href="./catalogo.html">Catalogo</a>
+                <a href="./carrito.html">Carrito</a>
+                <a href="./pedidos.html">Gestion de pedidos</a>
+                <a href="./login.html">Iniciar Sesión</a>
+            </aside>
+            <main class ="main-index">
+                <div class = "top-contenedor">
+                    <a href="./index.html"><img src="./imgs/back.png" alt=""></a>
+                    <h1>Catalogo de productos</h1>
+                </div>
+                <div class = "catalogo-wrap">
+                    <table class="tabla-productos">
+                        <thead>
+                            <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Smartphone X</strong></td>
+                                <td>$899.00</td>
+                                <td class="celda-acciones">
+                                    <div class="contenedor-botones">
+                                        <a href="detalles.html" class="btn-estilo btn-detalles">Detalles</a>
+                                        <a href="carrito.html" class="btn-estilo btn-carrito">Añadir al carrito</a>
+                                        <a href="resena.html" class="btn-estilo btn-resena">Reseña </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Laptop ZenBook 14</strong></td>
+                                <td>$1,150.00</td>
+                                <td class="celda-acciones">
+                                    <div class="contenedor-botones">
+                                        <a href="detalles-laptop.html" class="btn-estilo btn-detalles">Detalles</a>
+                                        <a href="carrito.html?id=102" class="btn-estilo btn-carrito">Añadir al carrito</a>
+                                        <a href="resena-laptop.html" class="btn-estilo btn-resena">Reseña</a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Sony WH-1000XM5</strong></td>
+                                <td>$349.99</td>
+                                <td class="celda-acciones">
+                                    <div class="contenedor-botones">
+                                        <a href="detalles-audio.html" class="btn-estilo btn-detalles">Detalles</a>
+                                        <a href="carrito.html?id=103" class="btn-estilo btn-carrito">Añadir al carrito</a>
+                                        <a href="resena-audio.html" class="btn-estilo btn-resena">Reseña</a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Monitor LG UltraWide 34"</strong></td>
+                                <td>$450.00</td>
+                                <td class="celda-acciones">
+                                    <div class="contenedor-botones">
+                                        <a href="detalles-monitor.html" class="btn-estilo btn-detalles">Detalles</a>
+                                        <a href="carrito.html?id=104" class="btn-estilo btn-carrito">Añadir al carrito</a>
+                                        <a href="resena-monitor.html" class="btn-estilo btn-resena">Reseña</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <div class="logo-footer">
+                <img src="./imgs/svg/logoBlanco.svg" alt="">
+                <p>Aplicaciones Web - Unidad 2</p>
+                <br>
+            </div>
+
+            <div class="contacto">
+                <h3>Contáctanos</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.whatsapp.com/"><img src="./imgs/whatsappLogo.svg" alt="WhatsApp"></a></li>
+                    <li><a href="https://www.instagram.com/"><img src="./imgs/instaLogo.svg" alt="Instagram"></a>
+                    </li>
+                    <li><a href="https://www.facebook.com/"><img src="./imgs/facebookLogo.svg" alt="Facebook"></a></li>
+                    <li><a href="https://mail.google.com/"><img src="./imgs/gmailLogo.svg" alt="Correo"></a></li>
+                </ul>
+
+            </div>
+
+            <div class="avisos">
+                <ul class="legal-links">
+                    <li><a href="">Términos y condiciones</a></li>
+                    <li><a href="">Aviso de privacidad</a></li>
+                    <li><a href="">Políticas de cookies</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
