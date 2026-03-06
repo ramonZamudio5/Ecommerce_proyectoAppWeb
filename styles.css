@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/* Estilos para la pagina index */
+/* inicio index */
 header {
     background-color: #525252; 
     color: white;
@@ -232,6 +232,10 @@ footer {
     padding-top: 15px;
 }
 
+/*fin login*/
+
+/*catalogo*/
+
 .top-contenedor .perfil-img{
     grid-column: 2;
     grid-row: 2;
@@ -413,3 +417,141 @@ footer {
     background-color: #94b8c2; 
     color: white; 
 }
+
+
+/*inicio detallesProducto*/
+.main-detalles {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white; 
+}
+
+.btn-back-container {
+    margin-bottom: 20px;
+}
+.btn-back {
+    font-size: 2.5rem;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.producto-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; 
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.producto-galeria .img-detalle {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.producto-rating {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.producto-titulo {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.producto-split {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; 
+    gap: 30px;
+}
+
+.producto-descripcion {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.producto-compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.precio {
+    font-size: 3.5rem;
+    margin-bottom: 5px;
+}
+
+.disponibilidad {
+    color: #4caf50;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.cantidad-box {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.btn-accion {
+    width: 100%;
+    max-width: 220px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn-agregar { background-color: #8bb1c2; } 
+.btn-agregar:hover { background-color: #7193a3; }
+
+.btn-comprar { background-color: #4a86e8; } 
+.btn-comprar:hover { background-color: #386bba; }
+
+.stock {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.opiniones-seccion h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.lista-opiniones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.opinion-card {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 2px; 
+}
+
+.opinion-card h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.opinion-meta {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.opinion-texto {
+    font-weight: bold;
+}
+
+/*fin detallesProducto*/
