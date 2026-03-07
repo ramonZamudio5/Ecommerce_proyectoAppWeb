@@ -1171,3 +1171,47 @@ footer {
 .btn-verde-admin { background-color: #4CAF50 !important; color: white !important; }
 
 footer .logo-footer { text-align: center; width: 100%; }
+
+.admin-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.admin-form-box {
+    background-color: white;
+    border: 3px solid black;
+    padding: 40px;
+    width: 100%;
+    max-width: 700px; 
+    box-shadow: 10px 10px 0px rgba(0,0,0,1); 
+}
+
+.admin-form-buttons {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-add {
+    background-color: #6189F8;
+    color: white;
+    padding: 10px 25px;
+    border: 2px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-cancel {
+    background-color: #ff4d4d; 
+    color: white;
+    padding: 10px 25px;
+    border: 2px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
