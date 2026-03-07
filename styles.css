@@ -1233,3 +1233,103 @@ footer .logo-footer { text-align: center; width: 100%; }
     cursor: pointer;
     text-decoration: none;
 }
+
+/* INICIO ADMIN GESTION PEDIDOS */
+/* Los estilos generales ya están definidos en el CSS, aquí se agregan los de la tabla nomás*/
+/* Tabla de Gestión de Pedidos */
+.tblContenedor {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.tblOrdenarTabla {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #333;
+}
+
+.tblOrdenarTabla th {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tblOrdenarTabla td {
+    padding: 12px;
+    border: 1px solid #333;
+    font-size: 16px;
+}
+
+/* Botones de acción */
+.botonesAccion {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.btnEstado {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btnPendiente {
+    background-color: #dc3545;
+}
+
+.btnPendiente:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.btnEnviado {
+    background-color: #007bff;
+}
+
+.btnEnviado:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.btnEntregado {
+    background-color: #28a745;
+}
+
+.btnEntregado:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+/* FIN ADMIN GESTION PEDIDOS */
+
+/* INICIO ADMIN GESTION RESEÑAS */
+
+/* Tabla de Gestión de Reseñas */
+/* Como es el mismo formato que los pedidos, solo se agregan los estilos de los botones de acción */
+/* Fecha del comentario */
+.fechaComentario {
+    font-size: 14px;
+    color: #999;
+}
+
+.btnEliminarResenas {
+    background-color: #dc3545;
+}
+
+.btnEliminarResenas:hover {
+    background-color: #c82333;
+    transform: translateY(-2px); /* Efecto de elevación al hacer hover/pasar el mouse por encima */
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+
