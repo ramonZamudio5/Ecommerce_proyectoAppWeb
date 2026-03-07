@@ -1130,3 +1130,44 @@ footer {
 .btn-regresar-inicio:hover {
     background-color: #d4cc55;
 }
+
+/* estilos para el administrador */
+.admin-grid-6 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 20px;
+}
+
+.admin-card {
+    background: white;
+    border: 3px solid black;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    box-shadow: 8px 8px 0px rgba(0,0,0,1);
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-weight: bold;
+}
+
+.admin-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.admin-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px #6189F8;
+}
+
+.btn-rojo-admin { background-color: #ff4d4d !important; color: white !important; }
+.btn-azul-admin { background-color: #6189F8 !important; color: white !important; }
+.btn-verde-admin { background-color: #4CAF50 !important; color: white !important; }
+
+footer .logo-footer { text-align: center; width: 100%; }
