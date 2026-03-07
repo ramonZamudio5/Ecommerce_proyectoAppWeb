@@ -1134,36 +1134,54 @@ footer {
 /* estilos para el administrador */
 .admin-grid-6 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 40px;
+    max-width: 900px; 
+    margin: 0 auto;
 }
 
 .admin-card {
     background: white;
     border: 3px solid black;
-    padding: 30px;
+    padding: 40px 20px;
     text-align: center;
     text-decoration: none;
     color: black;
-    box-shadow: 8px 8px 0px rgba(0,0,0,1);
+    box-shadow: 6px 6px 0px rgba(0,0,0,1);
     transition: 0.2s;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     font-weight: bold;
+    font-size: 1.3rem;
+    border-radius: 15px;
 }
 
 .admin-card img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
 }
 
 .admin-card:hover {
     transform: translate(-4px, -4px);
-    box-shadow: 12px 12px 0px #6189F8;
+    box-shadow: 10px 10px 0px #6189F8;
+    background-color: white;
+}
+.catalogo-wrap-admin {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px;
+}
+.tabla-admin-centrada {
+    width: 100%;
+    max-width: 1000px; /* Ancho mayor para que se vea como en tu imagen */
+    border-collapse: collapse;
+    margin: 0 auto;
 }
 
 .btn-rojo-admin { background-color: #ff4d4d !important; color: white !important; }
