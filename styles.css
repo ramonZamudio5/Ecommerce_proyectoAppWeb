@@ -1179,7 +1179,7 @@ footer {
 }
 .tabla-admin-centrada {
     width: 100%;
-    max-width: 1000px; /* Ancho mayor para que se vea como en tu imagen */
+    max-width: 1000px; 
     border-collapse: collapse;
     margin: 0 auto;
 }
