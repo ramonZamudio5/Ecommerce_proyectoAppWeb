@@ -1,0 +1,125 @@
+<%-- 
+    Document   : AdminGestionPedidos
+    Created on : 24 mar 2026, 14:24:28
+    Author     : ramonsebastianzamudioayala
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Gestión de Pedidos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class=div>
+            <div class="logo">
+                <a href="./index.html">
+                    <h1>Logo de la marca</h1>
+                </a>
+            </div>
+            <div class="usuario">
+                <a href="./perfilUsuario.html"><img src="./imgs/user.png" alt=""></a>
+                <h3>Cerrar sesión</h3>
+            </div>
+        </div>
+    </header>
+    <div class="contenido-flex">
+        <aside>
+            <a href="./catalogo.html">Catalogo</a>
+            <a href="./carrito.html">Carrito</a>
+            <a href="./pedidos.html">Gestion de pedidos</a>
+            <a href="./adminPrincipal.html">Administrador</a>
+            <a href="./login.html">Iniciar Sesión</a>
+        </aside>
+        <main class="main-index">
+            <div class="top-contenedor">
+                <a href="./index.html"><img src="./imgs/back.png"></a>
+                <h1>Gestión de pedidos</h1>
+            </div>
+            <div class="tblContenedor">
+                <table class="tblOrdenarTabla">
+                    <thead>
+                        <tr>
+                            <th>ID Pedido</th>
+                            <th>Correo del cliente</th>
+                            <th>Estado</th>
+                            <th>Acciones de estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1001</td>
+                            <td>Fernando@gmail.com</td>
+                            <td><span class="estatusPendiente">Pendiente</span></td>
+                            <td>
+                                <div class="botonesAccion">
+                                    <button class="btnEstado btnPendiente">Pendiente</button>
+                                    <button class="btnEstado btnEnviado">Enviado</button>
+                                    <button class="btnEstado btnEntregado">Entregado</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#1001</td>
+                            <td>Jesus17@gmail.com</td>
+                            <td><span class="estatusEnviado">Enviado</span></td>
+                            <td>
+                                <div class="botonesAccion">
+                                    <button class="btnEstado btnPendiente">Pendiente</button>
+                                    <button class="btnEstado btnEnviado">Enviado</button>
+                                    <button class="btnEstado btnEntregado">Entregado</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#1001</td>
+                            <td>maria@gmail.com</td>
+                            <td><span class="estatusEntregado">Entregado</span></td>
+                            <td>
+                                <div class="botonesAccion">
+                                    <button class="btnEstado btnPendiente">Pendiente</button>
+                                    <button class="btnEstado btnEnviado">Enviado</button>
+                                    <button class="btnEstado btnEntregado">Entregado</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="logo-footer">
+            <img src="./imgs/svg/logoBlanco.svg" alt="">
+            <p>Aplicaciones Web - Unidad 2</p>
+            <br>
+        </div>
+
+        <div class="contacto">
+            <h3>Contáctanos</h3>
+            <ul class="social-links">
+                <li><a href="https://www.whatsapp.com/"><img src="./imgs/whatsappLogo.svg" alt="WhatsApp"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="./imgs/instaLogo.svg" alt="Instagram"></a>
+                </li>
+                <li><a href="https://www.facebook.com/"><img src="./imgs/facebookLogo.svg" alt="Facebook"></a></li>
+                <li><a href="https://mail.google.com/"><img src="./imgs/gmailLogo.svg" alt="Correo"></a></li>
+            </ul>
+
+        </div>
+
+        <div class="avisos">
+            <ul class="legal-links">
+                <li><a href="">Términos y condiciones</a></li>
+                <li><a href="">Aviso de privacidad</a></li>
+                <li><a href="">Políticas de cookies</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

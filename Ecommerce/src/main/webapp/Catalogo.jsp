@@ -1,0 +1,153 @@
+<%-- 
+    Document   : Catalogo
+    Created on : 24 mar 2026, 14:26:46
+    Author     : ramonsebastianzamudioayala
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ecommerce web</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div class = div>
+                <div class = "logo">
+                    <a href="./index.html"><h1>Logo de la marca</h1></a>
+                </div>
+                <div class = "usuario">
+                    <a href="./perfilUsuario.html"><img src="./imgs/user.png" alt=""></a>
+                <h3>Cerrar sesión</h3>
+                </div>
+            </div>
+        </header>
+        <div class = "contenido-flex">
+            <aside>
+                <form class="contenedor-filtros">
+                    <h2>Filtrar Búsqueda</h2>
+
+                    <div class="campo">
+                        <label for="txt_productos">Nombre del producto</label>
+                        <input type="text" name="txt_productos" id="txt_productos" >
+                    </div>
+
+                    <div class="campo">
+                        <label for="txt_precio">Precio máximo</label>
+                        <input type="number" name="txt_precio" id="txt_precio" >
+                    </div>
+
+                    <div class="contenedor-radio">
+                        <h3>Ordenar por precio:</h3>
+                        <label class="opcion-radio">
+                            <input type="radio" name="orden" value="Mayor" checked>
+                            <span class="custom-radio"></span>
+                            Mayor a menor
+                        </label>
+                        <label class="opcion-radio">
+                            <input type="radio" name="orden" value="Menor">
+                            <span class="custom-radio"></span>
+                            Menor a mayor
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-estilo btn-aplicar">Aplicar Filtros</button>
+                </form>
+            </aside>
+            <main class ="main-index">
+                <div class = "top-contenedor">
+                    <a href="./index.html"><img src="./imgs/back.png" alt=""></a>
+                    <h1>Catalogo de productos</h1>
+                </div>
+                <div class = "catalogo-wrap">
+                    <table class="tabla-productos">
+                        <thead>
+                            <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Smartphone X</strong></td>
+                                <td>$899.00</td>
+                                <td class="celda-acciones">
+                                    <div class="contenedor-botones">
+                                        <a href="detallesProducto.html" class="btn-estilo btn-detalles">Detalles</a>
+                                        <a href="carrito.html" class="btn-estilo btn-carrito">Añadir al carrito</a>
+                                        <a href="crearResenia.html" class="btn-estilo btn-resena">Reseña </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Laptop ZenBook 14</strong></td>
+                                <td>$1,150.00</td>
+                                <td class="celda-acciones">
+                                    <div class="contenedor-botones">
+                                        <a href="detallesProducto.html" class="btn-estilo btn-detalles">Detalles</a>
+                                        <a href="carrito.html?id=102" class="btn-estilo btn-carrito">Añadir al carrito</a>
+                                        <a href="crearResenia.html" class="btn-estilo btn-resena">Reseña</a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Sony WH-1000XM5</strong></td>
+                                <td>$4,953.00</td>
+                                <td class="celda-acciones">
+                                    <div class="contenedor-botones">
+                                        <a href="detallesProducto.html" class="btn-estilo btn-detalles">Detalles</a>
+                                        <a href="carrito.html?id=103" class="btn-estilo btn-carrito">Añadir al carrito</a>
+                                        <a href="crearResenia.html" class="btn-estilo btn-resena">Reseña</a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Monitor LG UltraWide 34"</strong></td>
+                                <td>$450.00</td>
+                                <td class="celda-acciones">
+                                    <div class="contenedor-botones">
+                                        <a href="detallesProducto.html" class="btn-estilo btn-detalles">Detalles</a>
+                                        <a href="carrito.html?id=104" class="btn-estilo btn-carrito">Añadir al carrito</a>
+                                        <a href="crearResenia.html" class="btn-estilo btn-resena">Reseña</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <div class="logo-footer">
+                <img src="./imgs/svg/logoBlanco.svg" alt="">
+                <p>Aplicaciones Web - Unidad 2</p>
+                <br>
+            </div>
+
+            <div class="contacto">
+                <h3>Contáctanos</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.whatsapp.com/"><img src="./imgs/whatsappLogo.svg" alt="WhatsApp"></a></li>
+                    <li><a href="https://www.instagram.com/"><img src="./imgs/instaLogo.svg" alt="Instagram"></a>
+                    </li>
+                    <li><a href="https://www.facebook.com/"><img src="./imgs/facebookLogo.svg" alt="Facebook"></a></li>
+                    <li><a href="https://mail.google.com/"><img src="./imgs/gmailLogo.svg" alt="Correo"></a></li>
+                </ul>
+
+            </div>
+
+            <div class="avisos">
+                <ul class="legal-links">
+                    <li><a href="">Términos y condiciones</a></li>
+                    <li><a href="">Aviso de privacidad</a></li>
+                    <li><a href="">Políticas de cookies</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
