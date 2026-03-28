@@ -19,14 +19,15 @@ public class FiltroAutorización implements Filter {
 
     String[] paginasPublicas = {
         "Index.jsp",
-        "Login",
+        "Login.jsp",
+        "login",
         "Carrito.jsp",
         "Catalogo.jsp",
         "CrearReseña.jsp",
         "DetallesProducto.jsp",
         "PagoConfirmado.jsp",
         "Pedidos.jsp",
-        "PerfilUsuario.jsp",
+        "PerfilUsuarios.jsp",
         "ProcesoPago.jsp",
         "Register.jsp"
     };
@@ -114,7 +115,7 @@ public class FiltroAutorización implements Filter {
             sr.getRequestDispatcher("/adminFake.jsp").forward(sr, sr1);
             return;
         } else if (isPrivate && !logged) {
-            sr.getRequestDispatcher("/index.jsp").forward(sr, sr1);
+            sr.getRequestDispatcher("/Index.jsp").forward(sr, sr1);
             return;
         }
 

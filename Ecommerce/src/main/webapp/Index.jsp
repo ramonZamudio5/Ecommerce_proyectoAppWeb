@@ -26,11 +26,10 @@
         </header>
         <div class = "contenido-flex">
             <aside>
-                <a href="./catalogo.html">Catalogo</a>
-                <a href="./carrito.html">Carrito</a>
-                <a href="./pedidos.html">Gestion de pedidos</a>
-                <a href="./adminPrincipal.html">Administrador</a>
-                <a href="./login.html">Iniciar Sesión</a>
+                <a href="./catalogo.jsp">Catalogo</a>
+                <a href="./carrito.jsp">Carrito</a>
+                <a href="./pedidos.jsp">Gestion de pedidos</a>
+                <a href="./login.jsp">Iniciar Sesión</a>
             </aside>
             <main class ="main-index">
                 <section>

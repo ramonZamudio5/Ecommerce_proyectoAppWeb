@@ -25,19 +25,24 @@
             </div>
             <div class="login-wrapper">
                 <div class="login-box">
-                    <form class="form-login">                        
+                    <form class="form-login" action="login" method="POST"> 
+                        <% if(request.getAttribute("mensaje") != null) { %>
+                            <p style="color: red; text-align: center;"><%= request.getAttribute("mensaje") %></p>
+                        <% } %>
                         <div class="input-group">
                             <label for="txt_email">Email</label>
-                            <input type="email" id="txt_email" class="input-stroke">
+                            <input type="email" id="txt_email" name="correo" class="input-stroke" required>
                         </div>
 
                         <div class="input-group">
                             <label for="password">Contraseña</label>
-                            <input type="password" id="password" class="input-stroke">
+                            <input type="password" id="password" name="contrasenia" class="input-stroke" required>
                         </div>
+                        <button type="submit" class="btn-login" style="border: none; cursor: pointer; width: 100%;">
+                            Entrar
+                        </button>
 
-                        <a href="./index.html" class="btn-login">Entrar</a>
-                        <h3>¿No tienes cuenta? <a href="./register.html">Regístrate</a></h3>
+                        <h3>¿No tienes cuenta? <a href="./Register.jsp">Regístrate</a></h3>
                     </form>
                 </div>
             </div>

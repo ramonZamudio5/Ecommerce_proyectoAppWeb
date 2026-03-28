@@ -18,23 +18,22 @@
     <header>
         <div class=div>
             <div class="logo">
-                <a href="./index.html">
+                <a href="./index.jsp">
                     <h1>Logo de la marca</h1>
                 </a>
             </div>
             <div class="usuario">
-                <a href="./perfilUsuario.html"><img src="./imgs/user.png" alt=""></a>
+                <a href="./perfilUsuario.jsp"><img src="./imgs/user.png" alt=""></a>
                 <h3>Cerrar sesión</h3>
             </div>
         </div>
     </header>
     <div class="contenido-flex">
         <aside>
-            <a href="./catalogo.html">Catalogo</a>
-            <a href="./carrito.html">Carrito</a>
-            <a href="./pedidos.html">Gestion de pedidos</a>
-            <a href="./adminPrincipal.html">Administrador</a>
-            <a href="./login.html">Iniciar Sesión</a>
+            <a href="./Catalogo.jsp">Catalogo</a>
+            <a href="./Carrito.jsp">Carrito</a>
+            <a href="./Pedidos.jsp">Gestion de pedidos</a>
+            <a href="./Login.jsp">Iniciar Sesión</a>
         </aside>
         <main class="main-index">
             <div class="top-contenedor">
@@ -42,12 +41,12 @@
                 <h1>Panel de administracion</h1>
             </div>
             <div class="admin-grid-6">
-                <a href="adminUsuarios.html" class="admin-card"><img src="./imgs/users.png" alt=""><span>Gestion de suarios</span></a>
-                <a href="adminCatalogo.html" class="admin-card"><img src="./imgs/Catalogo.png" alt=""><span>Catalogo de productos</span></a>
-                <a href="adminCrearProducto.html" class="admin-card"><img src="./imgs/crearP.png" alt=""><span>Crear producto</span></a>
-                <a href="adminEditarProducto.html" class="admin-card"><img src="./imgs/edit.png" alt=""><span>Editar producto</span></a>
-                <a href="adminGestionPedidos.html" class="admin-card"><img src="./imgs/gestionar.png" alt=""><span>Gestion de pedidos</span></a>
-                <a href="adminGestionResenas.html" class="admin-card"><img src="./imgs/gestionarR.png" alt=""><span>Gestion de reseñas</span></a>
+                <a href="AdminUsuarios.jsp" class="admin-card"><img src="./imgs/users.png" alt=""><span>Gestion de suarios</span></a>
+                <a href="AdminCatalogo.jsp" class="admin-card"><img src="./imgs/Catalogo.png" alt=""><span>Catalogo de productos</span></a>
+                <a href="AdminCrearProducto.jsp" class="admin-card"><img src="./imgs/crearP.png" alt=""><span>Crear producto</span></a>
+                <a href="AdminEditarProducto.jsp" class="admin-card"><img src="./imgs/edit.png" alt=""><span>Editar producto</span></a>
+                <a href="AdminGestionPedidos.jsp" class="admin-card"><img src="./imgs/gestionar.png" alt=""><span>Gestion de pedidos</span></a>
+                <a href="AdminGestionResenias.jsp" class="admin-card"><img src="./imgs/gestionarR.png" alt=""><span>Gestion de reseñas</span></a>
             </div>
         </main>
     </div>

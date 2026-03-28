@@ -52,7 +52,11 @@ public class UsuariosDAO implements IUsuariosDAO {
 
             String contraseniaBD = usuario.getContrasenia();
 
-            if (contraseniaBD.equals(contraseniaEncriptadaIngresada)) {
+            String hashBDLimpio = contraseniaBD.trim();
+            String hashNuevoLimpio = contraseniaEncriptadaIngresada.trim();
+
+            if (hashBDLimpio.equals(hashNuevoLimpio)) {
+                System.out.println("DEBUG: LOGIN EXITOSO");
                 return usuario;
             } else {
                 System.err.println("Contraseña incorrecta para el usuario: " + correo);
