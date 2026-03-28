@@ -4,7 +4,9 @@
  */
 package bos;
 
-import dtos.ProductoDTO;
+import java.util.ArrayList;
+import java.util.List;
+
 import dtos.ReseñaDTO;
 import dtos.UsuarioDTO;
 import entidades.Reseña;
@@ -20,10 +22,6 @@ import interfaces.IProductosDAO;
 import interfaces.IReseniasBO;
 import interfaces.IReseniasDAO;
 import interfaces.IUsuariosDAO;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import mappers.ReseñaMapper;
 import mappers.UsuarioMapper;
 

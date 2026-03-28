@@ -17,16 +17,16 @@ public class ProductoDTO {
     private Double precio;
     private Integer stock;
     private String descripcion;
-    private Boolean disponibilidad;
+    private DisponibilidadDTO disponibilidad;
     private String especificacionesTecnicas;
     private String rutaImagen;
+    private Integer valoracion;
     private List<ReseñaDTO> reseñas;
-    private CategoriaDTO categoria;
 
     public ProductoDTO() {
     }
 
-    public ProductoDTO(Long id, String nombre, Double precio, Integer stock, String descripcion, Boolean disponibilidad, String especificacionesTecnicas, String rutaImagen) {
+    public ProductoDTO(Long id, String nombre, Double precio, Integer stock, String descripcion, DisponibilidadDTO disponibilidad, String especificacionesTecnicas, String rutaImagen) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -37,7 +37,7 @@ public class ProductoDTO {
         this.rutaImagen = rutaImagen;
     }
 
-    public ProductoDTO(Long id, String nombre, Double precio, Integer stock, String descripcion, Boolean disponibilidad, String especificacionesTecnicas, String rutaImagen, List<ReseñaDTO> reseñas) {
+    public ProductoDTO(Long id, String nombre, Double precio, Integer stock, String descripcion, DisponibilidadDTO disponibilidad, String especificacionesTecnicas, String rutaImagen, List<ReseñaDTO> reseñas) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -60,9 +60,8 @@ public class ProductoDTO {
      * @param disponibilidad Estado del producto
      * @param especificacionesTecnicas Especificaciones tecnicas
      * @param rutaImagen ruta de la imagen del producto
-     * @param categoria Categoria a la cual pertenece el producto
      */
-    public ProductoDTO(String nombre, Double precio, Integer stock, String descripcion, Boolean disponibilidad, String especificacionesTecnicas, String rutaImagen, CategoriaDTO categoria) {
+    public ProductoDTO(String nombre, Double precio, Integer stock, String descripcion, DisponibilidadDTO disponibilidad, String especificacionesTecnicas, String rutaImagen) {
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
@@ -70,7 +69,6 @@ public class ProductoDTO {
         this.disponibilidad = disponibilidad;
         this.especificacionesTecnicas = especificacionesTecnicas;
         this.rutaImagen = rutaImagen;
-        this.categoria = categoria;
     }
 
     public Long getId() {
@@ -113,11 +111,11 @@ public class ProductoDTO {
         this.descripcion = descripcion;
     }
 
-    public Boolean getDisponibilidad() {
+    public DisponibilidadDTO getDisponibilidad() {
         return disponibilidad;
     }
 
-    public void setDisponibilidad(Boolean disponibilidad) {
+    public void setDisponibilidad(DisponibilidadDTO disponibilidad) {
         this.disponibilidad = disponibilidad;
     }
 
@@ -137,6 +135,14 @@ public class ProductoDTO {
         this.rutaImagen = rutaImagen;
     }
 
+    public Integer getValoracion() {
+        return valoracion;
+    }
+
+    public void setValoracion(Integer valoracion) {
+        this.valoracion = valoracion;
+    }
+
     public List<ReseñaDTO> getReseñas() {
         return reseñas;
     }
@@ -145,12 +151,5 @@ public class ProductoDTO {
         this.reseñas = reseñas;
     }
 
-    public CategoriaDTO getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(CategoriaDTO categoria) {
-        this.categoria = categoria;
-    }
 
 }

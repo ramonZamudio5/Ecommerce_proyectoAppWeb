@@ -5,7 +5,6 @@
 package implementaciones;
 
 import entidades.EstadoPedido;
-import entidades.EstadoTransaccion;
 import entidades.MetodoPago;
 import entidades.Pedido;
 import entidades.TipoMetodoPago;
@@ -77,7 +76,7 @@ public class PedidosDAOTest {
 //        Usuario usuario = new Usuario();
 //        usuario.setId(1l);
 //        Date fecha = new Date();
-//        MetodoPago pago = new MetodoPago(EstadoTransaccion.ACEPTADO, 2500.0, LocalDateTime.now(), TipoMetodoPago.TARJETA);
+//        MetodoPago pago = new MetodoPago(2500.0, LocalDateTime.now(), TipoMetodoPago.TARJETA);
 //        Pedido pedido =  new Pedido("MX2fa0456", EstadoPedido.ENVIADO, 2500.0, fecha, "Calle paris cerca del six #3233", usuario, pago);
 //        
 //        Pedido pedidoBD = dao.agregarPedido(pedido);

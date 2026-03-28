@@ -1,39 +1,36 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package implementaciones;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-/**
- *
- * @author gael_
- */
-
-
 public class ManejadorConexiones {
-    public static EntityManager getEntityManager(){
-         EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("com.mycompany_ecommercePersistencia_jar_1.0-SNAPSHOTPU");
-         EntityManager entityManager = emFactory.createEntityManager();
-         return entityManager;
-         
-         
-    }
+
+    // Crea una instancia de EntityManagerFactory utilizando la unidad de persistencia definida en persistence.xml
+    // Para que no se creen varias instancias de EntityManagerFactory, se declara como static final
     
-    //MAIN PARA MAPEAR LAS TABLAS EN MYSQL
+    private static final EntityManagerFactory emFactory =
+            Persistence.createEntityManagerFactory(
+                    "com.mycompany_ecommercePersistencia_jar_1.0-SNAPSHOTPU");
+
+    public static EntityManager getEntityManager() {
+        return emFactory.createEntityManager();
+    }
+
+    // MAIN PARA MAPEAR LAS TABLAS EN MYSQL
     public static void main(String[] args) {
         System.out.println("Iniciando JPA...");
 
         EntityManager em = ManejadorConexiones.getEntityManager();
 
+        //Iniciamos una transacción para que se creen las tablas en la base de datos
         em.getTransaction().begin();
         em.getTransaction().commit();
+        //Y cerramos el EntityManager
 
         em.close();
+        // Se cierra pa
 
-        System.out.println("Base construida correctamente.");
+        System.out.println("Base construida correctamente, eso es todo");
     }
 }

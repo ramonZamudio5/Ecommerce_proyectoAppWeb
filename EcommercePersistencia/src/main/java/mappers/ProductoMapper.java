@@ -1,50 +1,49 @@
 package mappers;
 
 import dtos.ProductoDTO;
-import dtos.ReseñaDTO;
 import entidades.Producto;
-import entidades.Reseña;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
  * @author pedro
  */
 public class ProductoMapper {
-    public static ProductoDTO entityToDTO(Producto producto){
-        ProductoDTO productoDTO = new ProductoDTO(producto.getId(), 
-                                                  producto.getNombre(), 
-                                                  producto.getPrecio(), 
-                                                  producto.getStock(), 
-                                                  producto.getDescripcion(), 
-                                                  producto.getDisponibilidad(), 
-                                                  producto.getEspecificacionesTecnicas(), 
-                                                  producto.getRutaImagen(), 
-                                                  ReseñaMapper.entityListToDTOList(producto.getResenias()));
-        productoDTO.setCategoria(CategoriaMapper.entityToDTO(producto.getCategoria()));
-        
+
+    public static ProductoDTO entityToDTO(Producto producto) {
+        ProductoDTO productoDTO = new ProductoDTO(
+                producto.getId(),
+                producto.getNombre(),
+                producto.getPrecio(),
+                producto.getStock(),
+                producto.getDescripcion(),
+                //convierte el enum Disponibilidad a DisponibilidadDTO
+                DisponibilidadMapper.toDTO(producto.getDisponibilidad()),
+                producto.getEspecificacionesTecnicas(),
+                producto.getRutaImagen(),
+                ReseñaMapper.entityListToDTOList(producto.getResenias()));
+
+        // mapea el campo valoracion del MER
+        productoDTO.setValoracion(producto.getValoracion());
+
         return productoDTO;
     }
-    
-    
-    public static Producto DTOToEntity(ProductoDTO producto){
+
+    public static Producto DTOToEntity(ProductoDTO producto) {
         Producto productoEntity = new Producto(
-                producto.getNombre(), 
-                producto.getPrecio(), 
-                producto.getStock(), 
-                producto.getDescripcion(), 
-                producto.getDisponibilidad(), 
-                producto.getEspecificacionesTecnicas(), 
+                producto.getNombre(),
+                producto.getPrecio(),
+                producto.getStock(),
+                producto.getDescripcion(),
+                //convierte DisponibilidadDTO al enum de entidad
+                DisponibilidadMapper.toEntity(producto.getDisponibilidad()),
+                producto.getEspecificacionesTecnicas(),
                 ReseñaMapper.DTOListToEntityList(producto.getReseñas()));
-        
+
         productoEntity.setRutaImagen(producto.getRutaImagen());
-        
-        productoEntity.setCategoria(CategoriaMapper.DTOToEntity(producto.getCategoria()));
-        
         productoEntity.setId(producto.getId());
-        
+        // Agregado: mapea el campo valoracion del MER
+        productoEntity.setValoracion(producto.getValoracion());
+
         return productoEntity;
     }
-
 }

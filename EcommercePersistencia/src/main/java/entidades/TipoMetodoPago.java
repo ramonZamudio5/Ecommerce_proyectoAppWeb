@@ -4,10 +4,7 @@
  */
 package entidades;
 
-/**
- *
- * @author gael_
- */
+// Se borró el tipo de pago contraentrega porque no se va a implementar, solo se van a manejar tarjeta y transferencia
 public enum TipoMetodoPago {
-    TARJETA,TRANSFERENCIA, CONTRAENTREGA
+    TARJETA,TRANSFERENCIA
 }

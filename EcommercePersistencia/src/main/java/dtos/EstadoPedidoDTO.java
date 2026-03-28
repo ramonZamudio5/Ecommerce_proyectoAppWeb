@@ -3,11 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Enum.java to edit this template
  */
 package dtos;
-
-/**
- *
- * @author juanpheras
- */
+// Se cambió el enum para manejar el estado del pedido, se agregó el estado cancelado y se eliminaron los estados que no se van a manejar como devuelto y en proceso
 public enum EstadoPedidoDTO {
-    ENTREGADO,ENVIADO,PREPARANDO,CANCELADO
+    PENDIENTE, ENVIADO, ENTREGADO, CANCELADO
 }

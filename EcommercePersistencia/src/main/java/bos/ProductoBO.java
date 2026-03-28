@@ -4,6 +4,9 @@
  */
 package bos;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import dtos.ProductoDTO;
 import dtos.ReseñaDTO;
 import entidades.Producto;
@@ -12,11 +15,9 @@ import exception.EditarProductoException;
 import exception.EliminarProductoException;
 import exception.ObtenerProductosException;
 import exception.PersistenciaException;
-import interfaces.IProductosBO;
 import implementaciones.ProductoDAO;
+import interfaces.IProductosBO;
 import interfaces.IProductosDAO;
-import java.util.ArrayList;
-import java.util.List;
 import mappers.ProductoMapper;
 import mappers.ReseñaMapper;
 
@@ -92,9 +93,9 @@ public class ProductoBO implements IProductosBO{
         }
 
     @Override
-    public List<ProductoDTO> buscarProductos(String nombre, Long categoriaId, Double precioMin, Double precioMax) throws ObtenerProductosException {
+    public List<ProductoDTO> buscarProductos(String nombre, Double precioMin, Double precioMax) throws ObtenerProductosException {
         try {
-        List<Producto> productos = productosDAO.buscarProductosDinamico(nombre, categoriaId, precioMin, precioMax);
+        List<Producto> productos = productosDAO.buscarProductosDinamico(nombre, precioMin, precioMax);
         
         List<ProductoDTO> productosDTO = new ArrayList<>();
         for (Producto producto : productos) {

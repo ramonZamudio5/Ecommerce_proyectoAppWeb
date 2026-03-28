@@ -4,11 +4,12 @@
  */
 package interfaces;
 
+import java.util.List;
+
 import dtos.ProductoDTO;
 import entidades.Producto;
 import entidades.Reseña;
 import exception.PersistenciaException;
-import java.util.List;
 
 /**
  *
@@ -26,7 +27,7 @@ public interface IProductosDAO {
 
     public Producto obtenerProductoPorId(Long id) throws PersistenciaException;
     
-    public List<Producto> buscarProductosDinamico(String nombre, Long categoriaId, Double precioMin, Double precioMax) throws PersistenciaException;
+    public List<Producto> buscarProductosDinamico(String nombre, Double precioMin, Double precioMax) throws PersistenciaException;
     
     public List<Reseña> obtenerReseñas(Long id) throws PersistenciaException;
     

@@ -4,10 +4,7 @@
  */
 package entidades;
 
-/**
- *
- * @author gael_
- */
+//Esto está bien
 public enum RolUsuario {
     ADMINISTRADOR, CLIENTE
 }

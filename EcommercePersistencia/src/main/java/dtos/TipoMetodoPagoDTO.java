@@ -4,11 +4,7 @@
  */
 package dtos;
 
-/**
- *
- * @author pedro
- */
 public enum TipoMetodoPagoDTO {
-        TARJETA,TRANSFERENCIA, CONTRAENTREGA
+        TARJETA,TRANSFERENCIA
 
 }

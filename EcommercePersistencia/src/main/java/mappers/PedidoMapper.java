@@ -4,16 +4,16 @@
  */
 package mappers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import dtos.DetallePedidoDTO;
 import dtos.EstadoPedidoDTO;
-import dtos.EstadoTransaccionDTO;
 import dtos.MetodoDePagoDTO;
 import dtos.PedidoDTO;
 import dtos.UsuarioDTO;
 import entidades.DetallesPedido;
 import entidades.Pedido;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *

@@ -4,16 +4,17 @@
  */
 package implementaciones;
 
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.TypedQuery;
+
 import entidades.EstadoPedido;
 import entidades.Pedido;
 import entidades.Usuario;
 import exception.PersistenciaException;
-import implementaciones.ManejadorConexiones;
 import interfaces.IPedidosDAO;
-import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.NoResultException;
-import javax.persistence.TypedQuery;
 
 /**
  *
@@ -121,6 +122,7 @@ public class PedidosDAO implements IPedidosDAO {
         EntityManager em = ManejadorConexiones.getEntityManager();
         try {
 
+            // Consulta JPQL para obtener los pedidos de un usuario específico, ordenados por fecha descendente
             String jpql
                     = "SELECT DISTINCT p FROM Pedido p "
                     + "LEFT JOIN FETCH p.detallesPedido "

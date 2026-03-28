@@ -4,14 +4,13 @@
  */
 package interfaces;
 
+import java.util.List;
+
 import dtos.EstadoPedidoDTO;
-import dtos.EstadoTransaccionDTO;
-import entidades.EstadoPedido;
 import dtos.PedidoDTO;
 import exception.AgregarPedidoException;
 import exception.CambiarEstadoException;
 import exception.ObtenerPedidoException;
-import java.util.List;
 
 /**
  *

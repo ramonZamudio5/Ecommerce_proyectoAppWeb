@@ -1,13 +1,11 @@
 package bos;
 
 import dtos.EstadoPedidoDTO;
-import dtos.EstadoTransaccionDTO;
 import dtos.PedidoDTO;
 import entidades.Carrito;
 import entidades.DetallesCarrito;
 import entidades.DetallesPedido;
 import entidades.EstadoPedido;
-import entidades.EstadoTransaccion;
 import entidades.MetodoPago;
 import entidades.Pedido;
 import entidades.TipoMetodoPago;
@@ -48,13 +46,6 @@ public class PedidosBO implements IPedidosBO {
         this.usuariosDAO = new UsuariosDAO();
     }
 
-    /**
-     * Método que cambia el estado de un pedido
-     *
-     * @param id identificador del pedido a cambiar
-     * @param estado nuevo estado del pedido
-     * @throws CambiarEstadoException
-     */
     @Override
     public void cambiarEstadoPedido(Long id, EstadoPedidoDTO estado) throws CambiarEstadoException {
         try {
@@ -66,20 +57,13 @@ public class PedidosBO implements IPedidosBO {
 
     @Override
     public PedidoDTO obtenerPedidoIndividual(Long id) throws ObtenerPedidoException {
-
         try {
             Pedido pedido = pedidoDAO.obtenerPedidoIndividual(id);
-
-            if (pedido == null) {
-                return null;
-            }
-            PedidoDTO dto = PedidoMapper.entityToDTO(pedido);
-            return dto;
-
+            if (pedido == null) return null;
+            return PedidoMapper.entityToDTO(pedido);
         } catch (PersistenciaException ex) {
             throw new ObtenerPedidoException("Error al cargar el pedido");
         }
-
     }
 
     @Override
@@ -88,8 +72,7 @@ public class PedidosBO implements IPedidosBO {
             List<Pedido> pedidos = pedidoDAO.obtenerTodosPedidos();
             List<PedidoDTO> pedidosDTO = new ArrayList<>();
             for (Pedido p : pedidos) {
-                PedidoDTO pedidoDTO = PedidoMapper.entityToDTO(p);
-                pedidosDTO.add(pedidoDTO);
+                pedidosDTO.add(PedidoMapper.entityToDTO(p));
             }
             return pedidosDTO;
         } catch (PersistenciaException ex) {
@@ -114,7 +97,6 @@ public class PedidosBO implements IPedidosBO {
         try {
             List<Pedido> pedidos = pedidoDAO.obtenerPedidosPorUsuario(idUsuario);
             List<PedidoDTO> pedidosDTO = new ArrayList<>();
-
             for (Pedido p : pedidos) {
                 pedidosDTO.add(PedidoMapper.entityToDTO(p));
             }
@@ -138,51 +120,43 @@ public class PedidosBO implements IPedidosBO {
                     .sum();
 
             TipoMetodoPago tipo;
-
             try {
                 tipo = TipoMetodoPago.valueOf(tipoPago.toUpperCase());
             } catch (IllegalArgumentException e) {
                 throw new AgregarPedidoException("Tipo de pago inválido");
             }
-            
-            //Se crea el método de pago para el pedido
+
             MetodoPago metodoPago = new MetodoPago();
             metodoPago.setTipo(tipo);
             metodoPago.setMonto(total);
             metodoPago.setFechaHora(new Date());
-            metodoPago.setEstado(EstadoTransaccion.ACEPTADO);
 
-            //CREAMOS EL PEDIDO PARA ENVIAR
             Pedido pedido = new Pedido();
             pedido.setNumeroPedido(generarNumeroPedido());
             pedido.setUsuario(usuariosDAO.buscarPorId(idUsuario));
-            pedido.setMetodoPago(metodoPago); // cascade = PERSIST
+            pedido.setMetodoPago(metodoPago);
             pedido.setDireccion(direccionEnvio);
             pedido.setFecha(new Date());
-            pedido.setEstado(EstadoPedido.PREPARANDO);
+            // Se cambió de preparado a Pendiente
+            pedido.setEstado(EstadoPedido.PENDIENTE);
             pedido.setTotal(total);
 
-            //Crear detalles del pedido desde el carrit
             List<DetallesPedido> detallesPedido = new ArrayList<>();
-
             for (DetallesCarrito dc : carrito.getDetallesCarrito()) {
                 DetallesPedido dp = new DetallesPedido();
-                dp.setPedido(pedido);          // relación inversa
+                dp.setPedido(pedido);
                 dp.setProducto(dc.getProducto());
                 dp.setCantidad(dc.getCantidadProducto());
-
                 detallesPedido.add(dp);
             }
-
             pedido.setDetallesPedido(detallesPedido);
 
             pedidoDAO.agregarPedido(pedido);
-            
+
             try {
                 carritosDAO.limpiarCarrito(carrito.getId());
             } catch (PersistenciaException e) {
-                // Loguear error pero no detener el flujo principal, ya que el pedido SÍ se hizo
-                Logger.getLogger(PedidosBO.class.getName()).log(Level.SEVERE, "Pedido creado, pero error al limpiar carrito", e);
+                        "Pedido creado, pero error al limpiar carrito", e);
             }
 
             return PedidoMapper.entityToDTO(pedido);
@@ -190,7 +164,6 @@ public class PedidosBO implements IPedidosBO {
         } catch (PersistenciaException ex) {
             Logger.getLogger(PedidosBO.class.getName()).log(Level.SEVERE, null, ex);
             throw new AgregarPedidoException("Error al crear el pedido", ex);
-
         }
     }
 
@@ -199,5 +172,4 @@ public class PedidosBO implements IPedidosBO {
         int random = ThreadLocalRandom.current().nextInt(1000, 9999);
         return "PED-" + fecha + "-" + random;
     }
-
 }

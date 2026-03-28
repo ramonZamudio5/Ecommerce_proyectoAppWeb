@@ -4,7 +4,6 @@
  */
 package mappers;
 
-import dtos.EstadoTransaccionDTO;
 import dtos.MetodoDePagoDTO;
 import dtos.TipoMetodoPagoDTO;
 import entidades.MetodoPago;
@@ -19,14 +18,10 @@ public class MetodoPagoMapper {
             return null;
         }
 
-        EstadoTransaccionDTO estadoDTO = EstadoTransaccionMapper.entityToDto(metodo.getEstado());
-        
         TipoMetodoPagoDTO tipoDTO = TipoMetodoPagoMapper.entityToDTO(metodo.getTipo());
-        
 
         return new MetodoDePagoDTO(
                 metodo.getId(),
-                estadoDTO,
                 metodo.getMonto(),
                 metodo.getFechaHora(),
                 tipoDTO
@@ -43,10 +38,6 @@ public class MetodoPagoMapper {
         metodo.setId(metodoDTO.getId());
         metodo.setMonto(metodoDTO.getMonto());
         metodo.setFechaHora(metodoDTO.getFechaHora());
-
-        if (metodoDTO.getEstado() != null) {
-            metodo.setEstado(EstadoTransaccionMapper.dtoToEntity(metodoDTO.getEstado()));
-        }
 
         if (metodoDTO.getTipo() != null) {
             metodo.setTipo(TipoMetodoPagoMapper.dtoToEntity(metodoDTO.getTipo()));

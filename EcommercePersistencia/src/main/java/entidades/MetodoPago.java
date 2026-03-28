@@ -5,8 +5,8 @@
 package entidades;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -29,10 +29,6 @@ public class MetodoPago implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @Column(name = "estado", nullable = false)
-    @Enumerated(EnumType.STRING)
-    private EstadoTransaccion estado;
-    
     @Column(name = "monto", nullable = false)
     private Double monto;
     
@@ -49,14 +45,6 @@ public class MetodoPago implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public EstadoTransaccion getEstado() {
-        return estado;
-    }
-
-    public void setEstado(EstadoTransaccion estado) {
-        this.estado = estado;
     }
 
     public Double getMonto() {
@@ -86,8 +74,7 @@ public class MetodoPago implements Serializable {
     public MetodoPago() {
     }
 
-    public MetodoPago(EstadoTransaccion estado, Double monto, Date fechaHora, TipoMetodoPago tipo) {
-        this.estado = estado;
+    public MetodoPago(Double monto, Date fechaHora, TipoMetodoPago tipo) {
         this.monto = monto;
         this.fechaHora = fechaHora;
         this.tipo = tipo;

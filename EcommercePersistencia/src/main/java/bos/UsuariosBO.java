@@ -4,22 +4,19 @@
  */
 package bos;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import dtos.UsuarioDTO;
 import entidades.Usuario;
 import exception.AdministrarUsuarioException;
 import exception.EditarUsuarioException;
-import exception.IniciarSesionException;
 import exception.PersistenciaException;
-import exception.RegistrarUsuarioException;
 import exception.UsuarioInexistenteException;
 import exception.UsuarioNoRegistradoException;
 import implementaciones.UsuariosDAO;
 import interfaces.IUsuariosBO;
 import interfaces.IUsuariosDAO;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import mappers.UsuarioMapper;
 
 /**
