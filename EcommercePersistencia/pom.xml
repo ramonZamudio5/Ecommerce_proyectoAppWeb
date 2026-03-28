@@ -78,4 +78,5 @@
         <maven.compiler.target>21</maven.compiler.target>
         <exec.mainClass>com.mycompany.ecommercepersistencia.EcommercePersistencia</exec.mainClass>
     </properties>
+    <name>ecommercePersistenciaa</name>
 </project>

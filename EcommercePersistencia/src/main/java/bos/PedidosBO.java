@@ -11,6 +11,7 @@ import entidades.Pedido;
 import entidades.TipoMetodoPago;
 import exception.AgregarPedidoException;
 import exception.CambiarEstadoException;
+import exception.CarritoException;
 import exception.ObtenerPedidoException;
 import exception.PersistenciaException;
 import implementaciones.CarritosDAO;
@@ -107,7 +108,7 @@ public class PedidosBO implements IPedidosBO {
     }
 
     @Override
-    public PedidoDTO crearPedido(Long idUsuario, String tipoPago, String direccionEnvio) throws AgregarPedidoException {
+    public PedidoDTO crearPedido(Long idUsuario, String tipoPago, String direccionEnvio) throws AgregarPedidoException{
         try {
             Carrito carrito = carritosDAO.obtenerCarritoUsuario(idUsuario);
             if (carrito == null || carrito.getDetallesCarrito().isEmpty()) {
@@ -156,7 +157,7 @@ public class PedidosBO implements IPedidosBO {
             try {
                 carritosDAO.limpiarCarrito(carrito.getId());
             } catch (PersistenciaException e) {
-                        "Pedido creado, pero error al limpiar carrito", e);
+                throw new AgregarPedidoException("Pedido creado, pero error al limpiar carrito", e);
             }
 
             return PedidoMapper.entityToDTO(pedido);
