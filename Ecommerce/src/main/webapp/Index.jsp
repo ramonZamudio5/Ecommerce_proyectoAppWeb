@@ -13,23 +13,13 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header>
-            <div class = div>
-                <div class = "logo">
-                    <a href="./index.html"><h1>Logo de la marca</h1></a>
-                </div>
-                <div class = "usuario">
-                    <a href="./perfilUsuario.html"><img src="./imgs/user.png" alt=""></a>
-                <h3>Cerrar sesión</h3>
-                </div>
-            </div>
-        </header>
+        <%@include file="/WEB-INF/fragmentos/header.jspf" %>
         <div class = "contenido-flex">
             <aside>
-                <a href="./catalogo.jsp">Catalogo</a>
-                <a href="./carrito.jsp">Carrito</a>
-                <a href="./pedidos.jsp">Gestion de pedidos</a>
-                <a href="./login.jsp">Iniciar Sesión</a>
+                <a href="./Catalogo.jsp">Catalogo</a>
+                <a href="./Carrito.jsp">Carrito</a>
+                <a href="./Pedidos.jsp">Gestion de pedidos</a>
+                <a href="./Login.jsp">Iniciar Sesión</a>
             </aside>
             <main class ="main-index">
                 <section>

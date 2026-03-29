@@ -30,11 +30,10 @@
     </header>
     <div class="contenido-flex">
         <aside>
-            <a href="./catalogo.html">Catalogo</a>
-            <a href="./carrito.html">Carrito</a>
-            <a href="./pedidos.html">Gestion de pedidos</a>
-            <a href="./adminPrincipal.html">Administrador</a>
-            <a href="./login.html">Iniciar Sesión</a>
+            <a href="./Catalogo.jps">Catalogo</a>
+            <a href="./Carrito.jsp">Carrito</a>
+            <a href="./Pedidos.jsp">Gestion de pedidos</a>
+            <a href="./Login.jsp">Iniciar Sesión</a>
         </aside>
         <main class="main-index">
             <div class="top-contenedor">
