@@ -62,7 +62,7 @@ public class Login extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.sendRedirect("/inicioSesion.jsp");
+        response.sendRedirect("/Login.jsp");
     }
 
     /**
@@ -85,7 +85,7 @@ public class Login extends HttpServlet {
 
             if (usuario == null) {
                 request.setAttribute("mensaje", "Correo o contraseña incorrectos");
-                request.getRequestDispatcher("inicioSesion.jsp").forward(request, response);
+                request.getRequestDispatcher("Login.jsp").forward(request, response);
                 return;
             }
 

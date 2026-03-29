@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  *
- * @author gael_
+ * @author
  */
 public interface IReseniasDAO {
     public void eliminarResenia(Long id) throws PersistenciaException;

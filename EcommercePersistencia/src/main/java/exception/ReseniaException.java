@@ -6,7 +6,7 @@ package exception;
 
 /**
  *
- * @author gael_
+ * @author s
  */
 public class ReseniaException extends Exception {
 

@@ -20,7 +20,8 @@ import javax.persistence.Table;
 
 /**
  *
- * @author  */
+ * @author  
+ */
 @Entity
 @Table (name="usuarios")
 public class Usuario implements Serializable {

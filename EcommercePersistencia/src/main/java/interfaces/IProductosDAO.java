@@ -13,7 +13,7 @@ import exception.PersistenciaException;
 
 /**
  *
- * @author gael_
+ * @author
  */
 public interface IProductosDAO {
 

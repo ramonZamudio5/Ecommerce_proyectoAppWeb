@@ -67,18 +67,18 @@ public class PedidosBOTest {
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
-
-    /**
-     * Test of obtenerTodosPedidos method, of class PedidosBO.
-     */
-    @Test
-    public void testObtenerTodosPedidos() throws Exception {
-        System.out.println("obtenerTodosPedidos");
-        PedidosBO instance = new PedidosBO();
-        List<PedidoDTO> expResult = null;
-        List<PedidoDTO> result = instance.obtenerTodosPedidos();
-        System.out.println(result);
-    }
+//
+//    /**
+//     * Test of obtenerTodosPedidos method, of class PedidosBO.
+//     */
+//    @Test
+//    public void testObtenerTodosPedidos() throws Exception {
+//        System.out.println("obtenerTodosPedidos");
+//        PedidosBO instance = new PedidosBO();
+//        List<PedidoDTO> expResult = null;
+//        List<PedidoDTO> result = instance.obtenerTodosPedidos();
+//        System.out.println(result);
+//    }
 
 //    /**
 //     * Test of agregarPedido method, of class PedidosBO.

@@ -75,7 +75,7 @@ public class UsuariosBOTest {
 //        assertEquals(usuario.getCorreo(), usuarioRegistar.getCorreo());
 //        assertEquals(usuario.getTelefono(), usuarioRegistar.getTelefono());
 //    }
-////
+//
 //    /**
 //     * Test of mostrarUsuarios method, of class UsuariosBO.
 //     */
