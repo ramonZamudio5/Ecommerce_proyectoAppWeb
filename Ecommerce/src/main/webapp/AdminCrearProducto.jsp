@@ -14,7 +14,7 @@
        <%@include file="/WEB-INF/fragmentos/aside.jspf"%>
         <main class="main-index">
             <div class="top-contenedor">
-                <a href="AdminCatalogo.jsp"><img src="./imgs/back.png" alt="Atrás"></a>
+                <a href="cargarproducto?vista=adminProducto"><img src="./imgs/back.png" alt="Atrás"></a>
                 <h1>Crear nuevo producto</h1>
             </div>
             <div class="admin-form-container">

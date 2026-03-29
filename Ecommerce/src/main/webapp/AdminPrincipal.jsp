@@ -25,9 +25,8 @@
             </div>
             <div class="admin-grid-6">
                 <a href="AdminUsuarios.jsp" class="admin-card"><img src="./imgs/users.png" alt=""><span>Gestion de suarios</span></a>
-                <a href="AdminCatalogo.jsp" class="admin-card"><img src="./imgs/Catalogo.png" alt=""><span>Catalogo de productos</span></a>
+                <a href="cargarproducto?vista=adminProducto" class="admin-card"><img src="./imgs/Catalogo.png" alt=""><span>Catalogo de productos</span></a>
                 <a href="AdminCrearProducto.jsp" class="admin-card"><img src="./imgs/crearP.png" alt=""><span>Crear producto</span></a>
-                <a href="AdminEditarProducto.jsp" class="admin-card"><img src="./imgs/edit.png" alt=""><span>Editar producto</span></a>
                 <a href="AdminGestionPedidos.jsp" class="admin-card"><img src="./imgs/gestionar.png" alt=""><span>Gestion de pedidos</span></a>
                 <a href="AdministrarResenias" class="admin-card"><img src="./imgs/gestionarR.png" alt=""><span>Gestion de reseñas</span></a>
             </div>

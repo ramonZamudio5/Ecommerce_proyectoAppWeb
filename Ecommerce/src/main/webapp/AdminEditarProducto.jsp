@@ -1,9 +1,3 @@
-<%-- 
-    Document   : AdminEditarProducto
-    Created on : 24 mar 2026, 14:24:07
-    Author     : ramonsebastianzamudioayala
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,44 +9,61 @@
 </head>
 
 <body>
-    <%@include  file="/WEB-INF/fragmentos/header.jspf"%>
+    <%@include file="/WEB-INF/fragmentos/header.jspf"%>
     <div class="contenido-flex">
-        <%@include  file="/WEB-INF/fragmentos/aside.jspf"%>
+        <%@include file="/WEB-INF/fragmentos/aside.jspf"%>
         <main class="main-index">
             <div class="top-contenedor">
-                <a href="adminCatalogo.html"><img src="./imgs/back.png" alt="Atras"></a>
+                <%-- Botón de regreso al catálogo --%>
+                <a href="cargarproducto?vista=adminProducto"><img src="./imgs/back.png" alt="Atras"></a>
                 <h1>Editar producto</h1>
             </div>
 
             <div class="admin-form-container">
                 <div class="admin-form-box">
-                    <form class="form-login">
+                    <%-- El action apunta al Servlet que limpiamos --%>
+                    <form action="EditarProducto" method="POST" enctype="multipart/form-data" class="form-login">
+                        
+                        <%-- CAMPOS OCULTOS (Vitales para saber qué producto estamos editando) --%>
+                        <input type="hidden" name="id" value="${producto.id}">
+                        <input type="hidden" name="rutaImagenActual" value="${producto.rutaImagen}">
+
                         <div class="input-group">
                             <label>Nombre</label>
-                            <input type="text" class="input-stroke" value="Escáner de Coche OBD2">
+                            <input type="text" name="nombre" class="input-stroke" value="${producto.nombre}" required>
                         </div>
 
                         <div class="input-group">
                             <label>Precio</label>
-                            <input type="number" class="input-stroke" value="699.00">
+                            <input type="number" step="0.01" name="precio" class="input-stroke" value="${producto.precio}" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Stock</label>
+                            <input type="number" name="stock" class="input-stroke" value="${producto.stock}" required>
                         </div>
 
                         <div class="input-group">
                             <label>Descripción</label>
-                            <textarea class="input-stroke" rows="6"
-                                style="resize: none;">Mejora el rendimiento de tu Chevrolet Colorado con las bujías A-Premium Iridium Platinum, diseñadas para ofrecer encendido potente, eficiencia de combustible y mayor durabilidad.</textarea>
+                            <textarea name="desc" class="input-stroke" rows="6" style="resize: none;" required>${producto.descripcion}</textarea>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Nueva Imagen (Opcional)</label>
+                            <input type="file" name="imagen" class="input-stroke" accept="image/png, image/jpeg, image/webp">
+                            <small style="color: gray;">Si no subes nada, se mantendrá la imagen actual.</small>
                         </div>
 
                         <div class="admin-form-buttons">
-                            <a href="adminCatalogo.html" class="btn-add">Actualizar</a>
-                            <a href="adminCatalogo.html" class="btn-cancel">Cancelar</a>
+                            <button type="submit" class="btn-add">Actualizar</button>
+                            <a href="cargarproducto?vista=adminProducto" class="btn-cancel">Cancelar</a>
                         </div>
                     </form>
                 </div>
             </div>
         </main>
     </div>
-    <%@include  file="/WEB-INF/fragmentos/footer.jspf"%>
+    <%@include file="/WEB-INF/fragmentos/footer.jspf"%>
 </body>
 
 </html>

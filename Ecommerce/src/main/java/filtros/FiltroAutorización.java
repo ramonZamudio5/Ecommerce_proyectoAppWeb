@@ -29,7 +29,12 @@ public class FiltroAutorización implements Filter {
         "Pedidos.jsp",
         "PerfilUsuarios.jsp",
         "ProcesoPago.jsp",
-        "Register.jsp"
+        "Register.jsp",
+        "cargarproducto",      
+        "EditarProducto",       
+        "borrarproducto",      
+        "AdminCatalogo.jsp",  
+        "AdminEditarProducto.jsp" 
     };
 
     String[] paginasAdmin = {
