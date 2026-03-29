@@ -23,7 +23,7 @@ public class FiltroAutorización implements Filter {
         "login",
         "Carrito.jsp",
         "Catalogo.jsp",
-        "CrearReseña.jsp",
+        "CrearResenia.jsp",
         "DetallesProducto.jsp",
         "PagoConfirmado.jsp",
         "Pedidos.jsp",
