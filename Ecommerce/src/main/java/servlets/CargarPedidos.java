@@ -4,9 +4,10 @@
  */
 package servlets;
 
-import bos.ProductoBO;
-import exception.EliminarProductoException;
-import interfaces.IProductosBO;
+import bos.PedidosBO;
+import dtos.PedidoDTO;
+import exception.ObtenerPedidoException;
+import interfaces.IPedidosBO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -14,17 +15,18 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
  *
- * @author 
+ * @author ramonsebastianzamudioayala
  */
-@WebServlet(name = "BorrarProducto", urlPatterns = {"/borrarproducto"})
-public class BorrarProducto extends HttpServlet {
+@WebServlet(name = "CargarPedidos", urlPatterns = {"/cargarpedidos"})
+public class CargarPedidos extends HttpServlet {
 
-    IProductosBO productosBO = new ProductoBO();
+    IPedidosBO pedidosBO = new PedidosBO();
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -43,10 +45,10 @@ public class BorrarProducto extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet BorrarProducto</title>");
+            out.println("<title>Servlet CargarPedidos</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet BorrarProducto at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet CargarPedidos at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -64,15 +66,14 @@ public class BorrarProducto extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String id = request.getParameter("id");
-
-        if (id == null) {
-            response.sendRedirect("cargarproducto?vista=adminProducto");
-            return;
+        try {
+            List<PedidoDTO> pedidos = pedidosBO.obtenerTodosPedidos();
+            request.setAttribute("listaPedidos", pedidos);
+            request.getRequestDispatcher("/AdminGestionPedidos.jsp").forward(request, response);
+        } catch (ObtenerPedidoException ex) {
+            request.setAttribute("mensaje", "Error: " + ex.getMessage());
+            request.getRequestDispatcher("/error.jsp").forward(request, response);
         }
-
-        request.setAttribute("idProducto", id);
-        request.getRequestDispatcher("borrarProducto.jsp").forward(request, response);
     }
 
     /**
@@ -86,16 +87,7 @@ public class BorrarProducto extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            long id = Long.parseLong(request.getParameter("idProducto"));
-            productosBO.eliminarProducto(id);
-
-            response.sendRedirect("cargarproducto?vista=adminProducto");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            response.sendRedirect("error.jsp");
-        }
+        processRequest(request, response);
     }
 
     /**

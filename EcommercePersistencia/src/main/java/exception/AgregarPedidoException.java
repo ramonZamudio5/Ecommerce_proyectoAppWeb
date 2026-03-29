@@ -6,7 +6,7 @@ package exception;
 
 /**
  *
- * @author juanpheras
+ * @author 
  */
 public class AgregarPedidoException extends Exception {
 

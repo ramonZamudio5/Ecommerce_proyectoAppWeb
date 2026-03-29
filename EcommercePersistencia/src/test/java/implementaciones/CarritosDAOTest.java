@@ -14,7 +14,7 @@
 //
 ///**
 // *
-// * @author pedro
+// * @author
 // */
 //public class CarritosDAOTest {
 //    

@@ -6,7 +6,7 @@ package exception;
 
 /**
  *
- * @author juanpheras
+ * @author
  */
 public class ObtenerReseniasException extends Exception {
 

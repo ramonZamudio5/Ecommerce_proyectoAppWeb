@@ -9,7 +9,7 @@ import entidades.TipoMetodoPago;
 
 /**
  *
- * @author gael_
+ * @author 
  */
 public class TipoMetodoPagoMapper {
     public static TipoMetodoPagoDTO entityToDTO(TipoMetodoPago tipoEntidad) {

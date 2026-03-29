@@ -21,7 +21,7 @@ import java.util.List;
 
 /**
  *
- * @author gael_
+ * @author 
  */
 @WebServlet(name = "administrar-resenias", urlPatterns = {"/AdministrarResenias"})
 public class AdministrarResenias extends HttpServlet {

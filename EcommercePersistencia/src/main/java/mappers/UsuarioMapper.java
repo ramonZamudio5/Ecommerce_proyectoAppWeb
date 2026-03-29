@@ -9,11 +9,14 @@ import entidades.Usuario;
 
 /**
  *
- * @author pedro
+ * @author 
  */
 public class UsuarioMapper {
 
     public static UsuarioDTO entityToDTO(Usuario usuario) {
+        if (usuario == null) {
+            return null;
+        }
         UsuarioDTO usuarioDTO = new UsuarioDTO(usuario.getId(),
                 usuario.getNombre(),
                 usuario.getDireccion(),

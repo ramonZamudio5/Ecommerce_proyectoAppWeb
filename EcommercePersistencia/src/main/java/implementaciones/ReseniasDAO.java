@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  *
- * @author gael_
+ * @author 
  */
 public class ReseniasDAO implements IReseniasDAO{
 

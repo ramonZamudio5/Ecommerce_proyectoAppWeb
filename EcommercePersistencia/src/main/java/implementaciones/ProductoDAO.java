@@ -16,7 +16,7 @@ import mappers.DisponibilidadMapper;
 
 /**
  *
- * @author gael_
+ * @author
  */
 public class ProductoDAO implements IProductosDAO {
 

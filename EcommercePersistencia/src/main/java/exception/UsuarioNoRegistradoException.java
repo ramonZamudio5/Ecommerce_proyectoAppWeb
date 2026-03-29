@@ -3,7 +3,7 @@ package exception;
 
 /**
  *
- * @author juanpheras
+ * @author
  */
 public class UsuarioNoRegistradoException extends Exception{
 

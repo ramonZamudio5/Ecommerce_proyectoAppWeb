@@ -18,7 +18,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author gael_
+ * @author 
  */
 @Entity
 @Table(name = "metodo_pago")

@@ -12,7 +12,7 @@
 //
 ///**
 // *
-// * @author gael_
+// * @author
 // */
 //public class ReseniasDAOTest {
 //    

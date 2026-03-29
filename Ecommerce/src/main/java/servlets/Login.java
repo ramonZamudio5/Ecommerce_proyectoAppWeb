@@ -18,7 +18,7 @@ import jakarta.servlet.http.HttpSession;
 
 /**
  *
- * @author pedro
+ * @author 
  */
 @WebServlet(name = "Login", urlPatterns = {"/login"})
 public class Login extends HttpServlet {

@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  *
- * @author pedro
+ * @author 
  */
 public interface ICarritosBO {
 

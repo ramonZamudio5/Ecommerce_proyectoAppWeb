@@ -27,7 +27,7 @@ public class PedidoMapper {
                 detallesDTO.add(DetallePedidoMapper.entityToDTO(detalle)); 
             }
         }
-        
+        System.out.println(pedido.getUsuario());
         UsuarioDTO usuarioDTO = UsuarioMapper.entityToDTO(pedido.getUsuario()); 
 
         MetodoDePagoDTO metodoPagoDTO = MetodoPagoMapper.entityToDTO(pedido.getMetodoPago());

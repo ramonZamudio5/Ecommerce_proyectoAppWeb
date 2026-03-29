@@ -16,7 +16,7 @@ import javax.persistence.TypedQuery;
 
 /**
  *
- * @author pedro
+ * @author 
  */
 public class CarritosDAO implements ICarritosDAO {
 

@@ -33,7 +33,7 @@ import mappers.PedidoMapper;
 
 /**
  *
- * @author ramonsebastianzamudioayala, juan pablo heras
+ * @author ramonsebastianzamudioayala
  */
 public class PedidosBO implements IPedidosBO {
 

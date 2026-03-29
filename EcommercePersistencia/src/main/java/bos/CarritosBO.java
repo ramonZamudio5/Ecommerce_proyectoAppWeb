@@ -17,7 +17,7 @@ import mappers.ProductoMapper;
 
 /**
  *
- * @author pedro
+ * @author 
  */
 public class CarritosBO implements ICarritosBO {
 

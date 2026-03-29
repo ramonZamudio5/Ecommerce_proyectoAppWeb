@@ -5,7 +5,7 @@ import entidades.Producto;
 
 /**
  *
- * @author pedro
+ * @author 
  */
 public class ProductoMapper {
 

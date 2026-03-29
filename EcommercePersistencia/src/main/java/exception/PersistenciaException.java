@@ -6,7 +6,7 @@ package exception;
 
 /**
  *
- * @author gael_
+ * @author 
  */
 public class PersistenciaException extends Exception{
        public PersistenciaException() {

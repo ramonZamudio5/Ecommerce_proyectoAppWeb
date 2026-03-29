@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  *
- * @author pedro
+ * @author 
  */
 @WebServlet(name = "CargarProducto", urlPatterns = {"/cargarproducto"})
 public class CargarProducto extends HttpServlet {

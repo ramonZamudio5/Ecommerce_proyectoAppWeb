@@ -6,7 +6,7 @@ import entidades.EstadoPedido;
 
 /**
  *
- * @author juanpheras
+ * @author 
  */
 public class EstadoPedidoMapper {
     

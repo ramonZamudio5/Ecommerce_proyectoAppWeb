@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author juanpheras
+ * @author 
  */
 @WebServlet(name = "EliminarResenia", urlPatterns = {"/eliminarResenia"})
 public class EliminarResenia extends HttpServlet {

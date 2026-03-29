@@ -20,7 +20,7 @@
        <%@include  file="/WEB-INF/fragmentos/aside.jspf"%>
         <main class="main-index">
             <div class="top-contenedor">
-                <a href="adminPrincipal.html"><img src="./imgs/back.png"></a>
+                <a href="AdminPrincipal.jsp"><img src="./imgs/back.png"></a>
                 <h1>Gestión de Usuarios</h1>
             </div>
             <div class="catalogo-wrap">

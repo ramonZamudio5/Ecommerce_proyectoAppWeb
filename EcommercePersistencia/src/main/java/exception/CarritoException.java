@@ -6,7 +6,7 @@ package exception;
 
 /**
  *
- * @author pedro
+ * @author 
  */
 public class CarritoException extends Exception{
 

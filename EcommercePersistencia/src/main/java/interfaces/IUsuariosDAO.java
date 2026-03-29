@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  *
- * @author gael_
+ * @author
  */
 public interface IUsuariosDAO {
     public Usuario iniciarSesion(String nombre, String contrasenia) throws PersistenciaException;

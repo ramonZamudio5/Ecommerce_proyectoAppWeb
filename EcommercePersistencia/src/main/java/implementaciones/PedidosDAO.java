@@ -18,7 +18,7 @@ import interfaces.IPedidosDAO;
 
 /**
  *
- * @author gael_
+ * @author
  */
 public class PedidosDAO implements IPedidosDAO {
 

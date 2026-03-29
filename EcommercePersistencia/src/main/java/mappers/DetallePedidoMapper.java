@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  *
- * @author gael_
+ * @author 
  */
 public class DetallePedidoMapper {
     public static DetallesPedido dtoToEntity(DetallePedidoDTO detalleDTO) {

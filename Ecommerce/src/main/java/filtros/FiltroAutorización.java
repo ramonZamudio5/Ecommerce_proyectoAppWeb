@@ -41,11 +41,13 @@ public class FiltroAutorización implements Filter {
         "AdminCatalogo.jsp",
         "AdminCrearProductos.jsp",
         "AdminEditarProductos.jsp",
-        "AdminGestionarPedidos.jsp",
+        "AdminGestionPedidos.jsp",
         "AdminGestionarResenias.jsp",
         "AdminPrincipal.jsp",
         "AdminUsuarios.jsp",
-        "AgregarProducto"
+        "AgregarProducto",
+        "cargarpedidos",
+        "modificar_pedido",
     };
         
 

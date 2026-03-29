@@ -21,7 +21,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 
 /**
  *
- * @author gael_
+ * @author
  */
 public class UsuariosDAO implements IUsuariosDAO {
 

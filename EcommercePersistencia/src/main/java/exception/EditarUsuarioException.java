@@ -6,7 +6,7 @@ package exception;
 
 /**
  *
- * @author gael_
+ * @author 
  */
 public class EditarUsuarioException extends Exception {
 

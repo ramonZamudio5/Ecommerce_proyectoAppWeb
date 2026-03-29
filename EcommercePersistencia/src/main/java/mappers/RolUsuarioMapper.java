@@ -9,7 +9,7 @@ import entidades.RolUsuario;
 
 /**
  *
- * @author pedro
+ * @author 
  */
 public class RolUsuarioMapper {
      public static RolUsuarioDTO toDTO(RolUsuario rol) {
