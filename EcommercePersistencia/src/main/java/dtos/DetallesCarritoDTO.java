@@ -54,6 +54,11 @@ public class DetallesCarritoDTO {
     public void setCarrito(Long carrito) {
         this.idcarrito = carrito;
     }
+
+    @Override
+    public String toString() {
+        return "DetallesCarritoDTO{" + "id=" + id + ", cantidadProductos=" + cantidadProductos + ", producto=" + producto + ", idcarrito=" + idcarrito + '}';
+    }
     
     
 }

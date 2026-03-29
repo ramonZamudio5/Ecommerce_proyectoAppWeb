@@ -55,6 +55,11 @@ public class MetodoDePagoDTO {
     public void setTipo(TipoMetodoPagoDTO tipo) {
         this.tipo = tipo;
     }
+
+    @Override
+    public String toString() {
+        return "MetodoDePagoDTO{" + "id=" + id + ", monto=" + monto + ", fechaHora=" + fechaHora + ", tipo=" + tipo + '}';
+    }
     
     
 }

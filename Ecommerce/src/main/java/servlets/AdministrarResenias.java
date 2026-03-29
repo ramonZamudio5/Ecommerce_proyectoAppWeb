@@ -4,9 +4,12 @@
  */
 package servlets;
 
-import bos.UsuariosBO;
-import dtos.UsuarioDTO;
-import interfaces.IUsuariosBO;
+import bos.ProductoBO;
+import bos.ReseniasBO;
+import dtos.ProductoDTO;
+import dtos.ReseñaDTO;
+import interfaces.IProductosBO;
+import interfaces.IReseniasBO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -14,17 +17,17 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  *
- * @author pedro
+ * @author gael_
  */
-@WebServlet(name = "Login", urlPatterns = {"/login"})
-public class Login extends HttpServlet {
-
-    IUsuariosBO usuariosBO = new UsuariosBO();
-
+@WebServlet(name = "administrar-resenias", urlPatterns = {"/AdministrarResenias"})
+public class AdministrarResenias extends HttpServlet {
+    
+    IProductosBO productosBO = new ProductoBO();
+    IReseniasBO reseniasBO = new ReseniasBO();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -42,10 +45,10 @@ public class Login extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Login</title>");
+            out.println("<title>Servlet AdministrarResenias</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Login at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet AdministrarResenias at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -61,8 +64,36 @@ public class Login extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.sendRedirect("/inicioSesion.jsp");
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        try {
+            List<ReseñaDTO> lista = reseniasBO.obtenerResenias();
+
+            // Creamos un Mapa para guardar los nombres de los productos
+            // Llave: ID del producto, Valor: Nombre del producto
+            java.util.Map<Long, String> mapaNombres = new java.util.HashMap<>();
+
+            if (lista != null) {
+                for (ReseñaDTO r : lista) {
+                    // Si el ID aún no está en nuestro "diccionario", lo buscamos
+                    if (!mapaNombres.containsKey(r.getIdProducto())) {
+                        ProductoDTO p = productosBO.obtenerProductoPorId(r.getIdProducto());
+                        if (p != null) {
+                            mapaNombres.put(r.getIdProducto(), p.getNombre());
+                        } else {
+                            mapaNombres.put(r.getIdProducto(), "Producto no encontrado");
+                        }
+                    }
+                }
+            }
+            request.setAttribute("listaResenias", lista);
+            request.setAttribute("nombresProductos", mapaNombres);
+
+            request.getRequestDispatcher("/AdminGestionResenias.jsp").forward(request, response);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -76,38 +107,7 @@ public class Login extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        String correo = request.getParameter("correo");
-        String contrasenia = request.getParameter("contrasenia");
-
-        try {
-            UsuarioDTO usuario = usuariosBO.iniciarSesion(correo, contrasenia);
-
-            if (usuario == null) {
-                request.setAttribute("mensaje", "Correo o contraseña incorrectos");
-                request.getRequestDispatcher("inicioSesion.jsp").forward(request, response);
-                return;
-            }
-
-            HttpSession session = request.getSession(true);
-            session.setAttribute("usuarioActual", usuario);
-            session.setAttribute("rol", usuario.getRol().name()); 
-            String nombreRol = usuario.getRol().name();
-            if (usuario.getRol().name().equals("ADMINISTRADOR")) {
-                response.sendRedirect(request.getContextPath() + "/AdminPrincipal.jsp");
-                return;
-            }
-
-            if (usuario.getRol().name().equals("CLIENTE")) {
-                response.sendRedirect("./Index.jsp");
-                return;
-            }
-
-        } catch (Exception e) {
-            request.setAttribute("mensaje", "Ocurrió un error al iniciar sesión " + e.getMessage());
-            request.getRequestDispatcher("Login.jsp").forward(request, response);
-        }
-
+        processRequest(request, response);
     }
 
     /**

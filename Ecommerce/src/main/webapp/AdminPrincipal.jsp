@@ -29,7 +29,7 @@
                 <a href="AdminCrearProducto.jsp" class="admin-card"><img src="./imgs/crearP.png" alt=""><span>Crear producto</span></a>
                 <a href="AdminEditarProducto.jsp" class="admin-card"><img src="./imgs/edit.png" alt=""><span>Editar producto</span></a>
                 <a href="AdminGestionPedidos.jsp" class="admin-card"><img src="./imgs/gestionar.png" alt=""><span>Gestion de pedidos</span></a>
-                <a href="AdminGestionResenias.jsp" class="admin-card"><img src="./imgs/gestionarR.png" alt=""><span>Gestion de reseñas</span></a>
+                <a href="AdministrarResenias" class="admin-card"><img src="./imgs/gestionarR.png" alt=""><span>Gestion de reseñas</span></a>
             </div>
         </main>
     </div>

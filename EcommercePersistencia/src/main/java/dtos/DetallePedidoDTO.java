@@ -42,6 +42,11 @@ public class DetallePedidoDTO {
         this.producto = producto;
         this.pedido = pedido;
     }
+
+    @Override
+    public String toString() {
+        return "DetallePedidoDTO{" + "id=" + id + ", cantidad=" + cantidad + ", producto=" + producto + ", pedido=" + pedido + '}';
+    }
     
     
 

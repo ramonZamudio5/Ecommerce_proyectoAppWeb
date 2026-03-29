@@ -127,7 +127,12 @@ public class UsuarioDTO {
     public void setReseña(List<ReseñaDTO> reseña) {
         this.reseña = reseña;
     }
+
+    @Override
+    public String toString() {
+        return "UsuarioDTO{" + "id=" + id + ", nombre=" + nombre + ", direccion=" + direccion + ", telefono=" + telefono + ", correo=" + correo + ", contrasenia=" + contrasenia + ", esActivo=" + esActivo + ", rol=" + rol + ", rese\u00f1a=" + reseña + '}';
+    }
      
-     
+    
      
 }

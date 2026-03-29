@@ -151,5 +151,10 @@ public class ProductoDTO {
         this.reseñas = reseñas;
     }
 
+    @Override
+    public String toString() {
+        return "ProductoDTO{" + "id=" + id + ", nombre=" + nombre + ", precio=" + precio + ", stock=" + stock + ", descripcion=" + descripcion + ", disponibilidad=" + disponibilidad + ", especificacionesTecnicas=" + especificacionesTecnicas + ", rutaImagen=" + rutaImagen + ", valoracion=" + valoracion + ", rese\u00f1as=" + reseñas + '}';
+    }
+
 
 }

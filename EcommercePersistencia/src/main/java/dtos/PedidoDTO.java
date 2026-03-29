@@ -122,4 +122,9 @@ public class PedidoDTO {
         }
         return "";
     }
+
+    @Override
+    public String toString() {
+        return "PedidoDTO{" + "id=" + id + ", numeroPedido=" + numeroPedido + ", estado=" + estado + ", total=" + total + ", fecha=" + fecha + ", metodoPago=" + metodoPago + ", detallesPedido=" + detallesPedido + ", direccion=" + direccion + ", usuario=" + usuario + '}';
+    }
 }

@@ -100,6 +100,11 @@ public class ReseñaDTO {
     public void setUsuario(UsuarioDTO usuario) {
         this.usuario = usuario;
     }
+
+    @Override
+    public String toString() {
+        return "Rese\u00f1aDTO{" + "id=" + id + ", comentario=" + comentario + ", estrellas=" + estrellas + ", fecha=" + fecha + ", idProducto=" + idProducto + ", usuario=" + usuario + '}';
+    }
     
     
 }

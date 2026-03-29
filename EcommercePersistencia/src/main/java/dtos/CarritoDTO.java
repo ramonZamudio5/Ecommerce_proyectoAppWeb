@@ -57,6 +57,11 @@ public class CarritoDTO {
     public void setUsuario(UsuarioDTO usuario) {
         this.usuario = usuario;
     }
+
+    @Override
+    public String toString() {
+        return "CarritoDTO{" + "id=" + id + ", total=" + total + ", detallesCarrito=" + detallesCarrito + ", usuario=" + usuario + '}';
+    }
     
     
 }
