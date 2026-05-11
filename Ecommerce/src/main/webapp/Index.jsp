@@ -9,6 +9,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ecommerce web</title>
         <link rel="stylesheet" href="styles.css">
     </head>
@@ -20,8 +21,6 @@
                 <section>
                     <h2>Integrantes del equipo</h2>
                     <p>Ramón Zamudio - 251924</p>
-                    <p>Carlos Clark - 247383</p>
-                    <p>Fernando Garces - 242099</p>
                 </section>
             </main>
         </div>
