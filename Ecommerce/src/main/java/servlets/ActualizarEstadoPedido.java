@@ -17,7 +17,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 /**
  *Servlet used to modify an order and it´s status
- * @author juanpheras
+ * @author ramonsebastianzamudioayala
  */
 @WebServlet(name = "ActualizarEstadoPedido", urlPatterns = {"/modificar_pedido"})
 public class ActualizarEstadoPedido extends HttpServlet {
